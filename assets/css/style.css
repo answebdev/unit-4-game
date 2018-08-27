@@ -1,0 +1,15 @@
+body {
+    background: url("../images/sun-pattern.png");
+  }
+
+.img-crystal {
+    position:absolute;
+    top:50px;
+    left: 100px;
+    z-index: -20;
+    height: 300px;
+}
+
+#game {
+    height: 125px;
+}
