@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: url("../images/mochaGrunge.png");
   }
@@ -19,9 +23,17 @@ body {
     height: 125px;
 }
 
+#crystals {
+    height: 185px;
+}
+
 .game-crystal {
     width: 15%;
     height: auto;
     float: left;
-    margin: 20px;
+    margin: 35px 34px 30px 34px;
+}
+
+#winCount, #lossCount {
+    font-size: 20px;
 }
