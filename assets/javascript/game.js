@@ -2,8 +2,9 @@ $(document).ready(function () {
 
     // Global variables
     var yourScore = 0;
-    var win = 44;
+    var win = 0;
     var loss = 0;
+    var sum = 0;
     // var startGame = function() {
 
     // Generate random number between 19-120 that user has to guess
@@ -26,10 +27,10 @@ $(document).ready(function () {
     var roundCrystalNum = Math.floor((Math.random() * 12) + 1);
     var yellowCrystalNum = Math.floor((Math.random() * 12) + 1);
     // Push random crystal number into an array to assign it to the crystal for the game
-    var assignedNum1 = [];
-    var assignedNum2 = [];
-    var assignedNum3 = [];
-    var assignedNum4 = [];
+    // var assignedNum1 = [];
+    // var assignedNum2 = [];
+    // var assignedNum3 = [];
+    // var assignedNum4 = [];
 
     // Generate a random number between 1-12 by clicking on a crystal - each crystal generates its own random number
 
@@ -52,12 +53,14 @@ $(document).ready(function () {
     $("#crystalOne").on("click", function () {
         // console.log("It worked!");
         // var result;
-        lozCrystalNum = Math.floor((Math.random() * 12) + 1);
+        // lozCrystalNum = Math.floor((Math.random() * 12) + 1);
         console.log("Random value for 1st crystal: " + lozCrystalNum);
+        total(lozCrystalNum);
 
-        assignedNum1.push(lozCrystalNum);
+        // assignedNum1.push(lozCrystalNum);
         // Console and use only the first random number of index 0
-        console.log("Random number in index 0 position: " + assignedNum1[0]);
+        // console.log("Random number in index 0 position: " + assignedNum1[0]);
+        // console.log("Type of: " + typeof assignedNum1[0]);
         // var an1 = assignedNum1[0];
         // console.log("var: " + an1);
 
@@ -67,32 +70,39 @@ $(document).ready(function () {
 
     $("#crystalTwo").on("click", function () {
         // console.log("It worked!");
-        redCrystalNum = Math.floor((Math.random() * 12) + 1);
+        // redCrystalNum = Math.floor((Math.random() * 12) + 1);
+        console.log("Random value for 2nd crystal: " + redCrystalNum);
         // console.log(redCrystalNum);
 
-        assignedNum2.push(redCrystalNum);
+        // assignedNum2.push(redCrystalNum);
         // Console and use only the first random number of index 0
-        console.log(assignedNum2[0]);
+        // console.log(assignedNum2[0]);
+        total(redCrystalNum);
+        // console.log("Sum: " + sum);
     });
 
     $("#crystalThree").on("click", function () {
         // console.log("It worked!");
-        roundCrystalNum = Math.floor((Math.random() * 12) + 1);
+        // roundCrystalNum = Math.floor((Math.random() * 12) + 1);
+        console.log("Random value for 3rd crystal: " + roundCrystalNum);
         // console.log(roundCrystalNum);
 
-        assignedNum3.push(roundCrystalNum);
+        // assignedNum3.push(roundCrystalNum);
         // Console and use only the first random number of index 0
-        console.log(assignedNum3[0]);
+        // console.log(assignedNum3[0]);
+        total(roundCrystalNum);
     });
 
     $("#crystalFour").on("click", function () {
         // console.log("It worked!");
-        yellowCrystalNum = Math.floor((Math.random() * 12) + 1);
+        // yellowCrystalNum = Math.floor((Math.random() * 12) + 1);
+        console.log("Random value for 4th crystal: " + yellowCrystalNum);
         // console.log(yellowCrystalNum);
 
-        assignedNum4.push(yellowCrystalNum);
+        // assignedNum4.push(yellowCrystalNum);
         // Console and use only the first random number of index 0
-        console.log(assignedNum4[0]);
+        // console.log(assignedNum4[0]);
+        total(yellowCrystalNum);
     });
 
     // var addedValues = function () {
@@ -100,8 +110,15 @@ $(document).ready(function () {
     //     console.log("sum: " + sum1);
     // }
 
+    function total(crystalClick) {
+        // sum = lozCrystalNum + redCrystalNum + roundCrystalNum + yellowCrystalNum;
+        sum = sum + crystalClick
+        console.log("Sum: " + sum);
+    }
+
     // var sum = (assignedNum1[0] + assignedNum2[0] + assignedNum3[0] + assignedNum4[0]);
     // console.log("The total is " + sum);
+    // console.log("Type of: " + typeof assignedNum1[0]);
 
     // Call the checkWin() function here:
 
