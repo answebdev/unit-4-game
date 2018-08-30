@@ -4,7 +4,7 @@ $(document).ready(function () {
     var yourScore = 0;
     var win = 0;
     var loss = 0;
-    var sum = 0;
+    // var sum = 0;
     // var startGame = function() {
 
     // Generate random number between 19-120 that user has to guess
@@ -16,9 +16,6 @@ $(document).ready(function () {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
     console.log(randomNum);
-    // $("#randomNumber").prepend("<br><hr>" + lottoNumber);
-    // document.getElementById("randomNumber").innerHTML = randomNum;
-    // document.getElementById("your-score").innerHTML = yourScore;
 
     // // Generate hidden random number between 1-12 for each crystal
     var lozCrystalNum = Math.floor((Math.random() * 12) + 1);
@@ -26,17 +23,12 @@ $(document).ready(function () {
     var redCrystalNum = Math.floor((Math.random() * 12) + 1);
     var roundCrystalNum = Math.floor((Math.random() * 12) + 1);
     var yellowCrystalNum = Math.floor((Math.random() * 12) + 1);
-    // Push random crystal number into an array to assign it to the crystal for the game
-    // var assignedNum1 = [];
-    // var assignedNum2 = [];
-    // var assignedNum3 = [];
-    // var assignedNum4 = [];
 
     // Generate a random number between 1-12 by clicking on a crystal - each crystal generates its own random number
 
-    // After generating random number, need to keep the same number for each crystal (assign this number to the crystal) for the game (until win or lose)
-    // Use these assigned numbers in a formula that adds the numbers together (sum)
-    // With each click add the corresponding numbers together with each click (i++ ?)
+    // After generating random number, need to keep the same number for each crystal (assign this number to the crystal) for the game (until win or lose) -- DONE
+    // Use these assigned numbers in a formula that adds the numbers together (sum) -- DONE
+    // With each click add the corresponding numbers together with each click (i++ ?) -- DONE
     // If the sum is equal to the random number, user wins - add a win and display a win message
     // If the sum is greater than the random number, user loses - add a loss and display a loss message
     // Restart the game - pick a new random number, etc.
@@ -70,10 +62,11 @@ $(document).ready(function () {
         total(yellowCrystalNum);
     });
 
+    // Function that adds the total value of the crystals together to get user's total score
     function total(crystalClick) {
-        // sum = lozCrystalNum + redCrystalNum + roundCrystalNum + yellowCrystalNum;
-        sum = sum + crystalClick
-        console.log("Sum: " + sum);
+        yourScore = yourScore + crystalClick;
+        console.log("Your Score: " + yourScore);
+        checkWin();
     }
 
 
@@ -82,20 +75,21 @@ $(document).ready(function () {
     //*******************************************************************
 
     // Check to see if the user has won
+    function checkWin() {
     // var checkWin = function () {
-    //     if (yourScore > randomNum) {
-    //         alert("You lost");
-    //         loss++;
-    //         document.getElementById("lossCount").innerHTML = "<strong>Losses:</strong> " + loss;
-    //         startGame();
-    //     }
-    //     else if (yourScore == randomNum) {
-    //         alert("You won!");
-    //         win++;
-    //         document.getElementById("winCount").innerHTML = "<strong>Wins:</strong> " + win;
-    //         startGame();
-    //     }
-    // }
+        if (yourScore > randomNum) {
+            alert("You lost");
+            loss++;
+            document.getElementById("lossCount").innerHTML = "<strong>Losses:</strong> " + loss;
+            // startGame();
+        }
+        else if (yourScore == randomNum) {
+            alert("You won!");
+            win++;
+            document.getElementById("winCount").innerHTML = "<strong>Wins:</strong> " + win;
+            // startGame();
+        }
+    }
 
     //*******************************************************************
 
@@ -113,11 +107,11 @@ $(document).ready(function () {
     // $("#your-score".html(yourScore);
 
 
-// RESTART THE GAME:
-// Set the current score AND your score back to 0
-// Change the HTML
-// Set the random number and the new random values for the crystals
-// So code: after a win/loss has been added (win++/loss++,), and after the HTML has changed, restart the game
+    // RESTART THE GAME:
+    // Set the current score AND your score back to 0
+    // Change the HTML
+    // Set the random number and the new random values for the crystals
+    // So code: after a win/loss has been added (win++/loss++,), and after the HTML has changed, restart the game
     // Need to make a startGame function - already being called above in the code that checks if the user has won
 
 });
