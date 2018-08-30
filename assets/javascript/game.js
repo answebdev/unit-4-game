@@ -65,6 +65,7 @@ $(document).ready(function () {
     // Function that adds the total value of the crystals together to get user's total score
     function total(crystalClick) {
         yourScore = yourScore + crystalClick;
+        document.getElementById("your-score").innerHTML = yourScore;
         console.log("Your Score: " + yourScore);
         checkWin();
     }
