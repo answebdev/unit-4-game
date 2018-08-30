@@ -68,51 +68,45 @@ $(document).ready(function () {
         document.getElementById("your-score").innerHTML = yourScore;
         console.log("Your Score: " + yourScore);
         checkWin();
+        // RESTART GAME FUNCTION HERE?
     }
-
-
-    // Call the checkWin() function here:
-
-    //*******************************************************************
 
     // Check to see if the user has won
     function checkWin() {
-    // var checkWin = function () {
         if (yourScore > randomNum) {
             alert("You lost");
             loss++;
             document.getElementById("lossCount").innerHTML = "<strong>Losses:</strong> " + loss;
             // startGame();
+            restartGame();
         }
         else if (yourScore == randomNum) {
             alert("You won!");
             win++;
             document.getElementById("winCount").innerHTML = "<strong>Wins:</strong> " + win;
             // startGame();
+            restartGame();
         }
     }
 
-    //*******************************************************************
+    function restartGame() {
+        yourScore = 0;
+        document.getElementById("your-score").innerHTML = yourScore;
+        console.log("Game over, your score: " + yourScore);
+        randomNum = Math.floor(Math.random() * (120 - 19 + 1) + 19);
+        document.getElementById("randomNumber").innerHTML = randomNum;
+        console.log("New random number: " + randomNum);
+        // reset crystal values
+        lozCrystalNum = Math.floor((Math.random() * 12) + 1);
+        redCrystalNum = Math.floor((Math.random() * 12) + 1);
+        roundCrystalNum = Math.floor((Math.random() * 12) + 1);
+        yellowCrystalNum = Math.floor((Math.random() * 12) + 1);
+        console.log("New crystal values: " + " Green = " + lozCrystalNum + " red = " + redCrystalNum + " round = " + roundCrystalNum + " yellow = " + yellowCrystalNum);
+    }
 
     // Variables that hold references to the places in the HTML where we want to display things.
     var ranNumLocation = document.getElementById("randomNumber");
     document.getElementById("randomNumber").innerHTML = randomNum;
     document.getElementById("your-score").innerHTML = yourScore;
-    // document.getElementById("winCount").innerHTML = "<strong>Wins:</strong> " + win;
-    // document.getElementById("lossCount").innerHTML = "<strong>Losses:</strong> " + loss;
-    // var yourScore = document.getElementById("your-score");
-
-
-    // document.getElementById("randomNumber").innerHTML = ranNumLocation;
-
-    // $("#your-score".html(yourScore);
-
-
-    // RESTART THE GAME:
-    // Set the current score AND your score back to 0
-    // Change the HTML
-    // Set the random number and the new random values for the crystals
-    // So code: after a win/loss has been added (win++/loss++,), and after the HTML has changed, restart the game
-    // Need to make a startGame function - already being called above in the code that checks if the user has won
 
 });
