@@ -37,3 +37,31 @@ body {
 #winCount, #lossCount {
     font-size: 20px;
 }
+
+#flash {
+    height: 185px;
+}
+
+#title {
+    text-align: center;
+}
+
+#left-icon {
+    float: left;
+}
+
+#right-icon {
+    float: right;
+}
+
+#lose-flash { 
+    display:none;
+    color:#000;
+    text-align: center;
+}
+
+#win-flash { 
+    display:none;
+    color:#000;
+    text-align: center;
+}

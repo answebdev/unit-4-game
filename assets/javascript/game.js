@@ -74,17 +74,25 @@ $(document).ready(function () {
     // Check to see if the user has won
     function checkWin() {
         if (yourScore > randomNum) {
-            alert("You lost");
+            $(function () {
+                $('#lose-flash').delay(500).fadeIn('normal', function () {
+                    $(this).delay(2500).fadeOut();
+                });
+            });
+            // alert("You lost");
             loss++;
             document.getElementById("lossCount").innerHTML = "<strong>Losses:</strong> " + loss;
-            // startGame();
             restartGame();
         }
         else if (yourScore == randomNum) {
-            alert("You won!");
+            $(function () {
+                $('#win-flash').delay(500).fadeIn('normal', function () {
+                    $(this).delay(2500).fadeOut();
+                });
+            });
+            // alert("You won!");
             win++;
             document.getElementById("winCount").innerHTML = "<strong>Wins:</strong> " + win;
-            // startGame();
             restartGame();
         }
     }

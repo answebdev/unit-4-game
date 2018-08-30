@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Crystal Collector</title>
     <link rel="icon" href="assets/images/gem.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -59,7 +61,7 @@
                     <h4 class="card-header">Totals</h4>
                     <div class="card-body" id="game">
                         <p id="winCount"><strong>Wins: </strong>0</p>
-                        <p id = "lossCount"><strong>Losses: </strong>0</p>
+                        <p id="lossCount"><strong>Losses: </strong>0</p>
                     </div>
                 </div>
             </div>
@@ -67,7 +69,7 @@
                 <div id="sizeControls" class="card">
                     <h4 class="card-header">Your total score is: </h4>
                     <div class="card-body" id="game">
-                        <h2  id="your-score"></h2>
+                        <h2 id="your-score"></h2>
                     </div>
                 </div>
             </div>
@@ -85,6 +87,27 @@
                     </div>
                 </div>
             </div>
+
+            <!-- <div class="col-lg-4">
+                <div id="flash">Sorry, you lost...</div>
+            </div> -->
+
+            <div class="col-lg-4">
+                <div id="sizeControls" class="card">
+                    <h4 class="card-header" id="title"><i class="fas fa-gem" id="left-icon"></i> Crystal Collector <i class="fas fa-gem"
+                            id="right-icon"></i></h4>
+                    <div class="card-body" id="flash">
+                        <h2 id="lose-flash">Sorry, you lose.
+                            <p></p><i class="far fa-frown"></i></h2>
+                        <h2 id="win-flash">Congratulations!
+                            <p></p>You win.
+                            <p></p>
+                            <p><i class="fas fa-trophy"></i></p>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <br>
 
