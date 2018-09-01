@@ -3,12 +3,22 @@
 }
 
 body {
-    background: url("../images/mochaGrunge.png");
+    /* background: url("../images/mochaGrunge.png"); */
+    background-color: #e9ebee;
+    /* background-color: #cccccc; */
   }
 
 .jumbotron {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    letter-spacing: 0.1em;
+    background-color: #0047AB;
+    color: #ffffff;
+}
+
+.card-header {
+    background-color: #0047AB;
+    color: #ffffff;
 }
 
 #img-crystal {
@@ -24,7 +34,7 @@ body {
 }
 
 #crystals {
-    height: 185px;
+    min-height: 185px;
 }
 
 .game-crystal {
@@ -35,11 +45,13 @@ body {
 }
 
 #winCount, #lossCount {
+    clear: both;
     font-size: 20px;
 }
 
 #flash {
     height: 185px;
+    /* height: auto; */
 }
 
 #title {
@@ -54,13 +66,15 @@ body {
     float: right;
 }
 
-#lose-flash { 
-    display:none;
+#lose-flash {
+    /* visibility: hidden; */
+    display: none;
     color:#000;
     text-align: center;
 }
 
-#win-flash { 
+#win-flash {
+    /* visibility: hidden; */
     display:none;
     color:#000;
     text-align: center;
