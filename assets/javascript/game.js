@@ -4,8 +4,6 @@ $(document).ready(function () {
     var yourScore = 0;
     var win = 0;
     var loss = 0;
-    // var sum = 0;
-    // var startGame = function() {
 
     // Generate random number between 19-120 that user has to guess
     var minNumber = 19;
@@ -23,23 +21,6 @@ $(document).ready(function () {
     var redCrystalNum = Math.floor((Math.random() * 12) + 1);
     var roundCrystalNum = Math.floor((Math.random() * 12) + 1);
     var yellowCrystalNum = Math.floor((Math.random() * 12) + 1);
-
-    // Generate a random number between 1-12 by clicking on a crystal - each crystal generates its own random number
-
-    // After generating random number, need to keep the same number for each crystal (assign this number to the crystal) for the game (until win or lose) -- DONE
-    // Use these assigned numbers in a formula that adds the numbers together (sum) -- DONE
-    // With each click add the corresponding numbers together with each click (i++ ?) -- DONE
-    // If the sum is equal to the random number, user wins - add a win and display a win message
-    // If the sum is greater than the random number, user loses - add a loss and display a loss message
-    // Restart the game - pick a new random number, etc.
-
-    // Reset the current score
-    // Set a new random number between 19 and 120
-    // Set different values for each of the crystals between 1 and 12
-    // Change the HTML to reflect all of the changes
-
-
-    // }
 
     // startGame();
     $("#crystalOne").on("click", function () {
@@ -68,7 +49,6 @@ $(document).ready(function () {
         document.getElementById("your-score").innerHTML = yourScore;
         console.log("Your Score: " + yourScore);
         checkWin();
-        // RESTART GAME FUNCTION HERE?
     }
 
     // Check to see if the user has won
