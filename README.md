@@ -26,4 +26,4 @@ https://answebdev.github.io/unit-4-game/
 
 ![Screenshot 02](screenshots/crystalCollector_screenshot02.png "Congratulations!")
 
-![Screenshot 03](screenshots/triviaGameDemo.gif "Demo")
+![Screenshot 03](screenshots/crystal_collector_demo.gif "Demo")
