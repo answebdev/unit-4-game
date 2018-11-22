@@ -22,8 +22,8 @@ https://answebdev.github.io/unit-4-game/
 
 # Screenshots
 
-![Screenshot 01](screenshots/triviaGame-screenshot-01.png "Trivia Questions")
+![Screenshot 01](screenshots/crystalCollector_screenshot01.png "Crystal Collector")
 
-![Screenshot 02](screenshots/triviaGame-screenshot-02.jpg "Scoreboard")
+![Screenshot 02](screenshots/crystalCollector_screenshot02.png "Congratulations!")
 
 ![Screenshot 03](screenshots/triviaGameDemo.gif "Demo")
